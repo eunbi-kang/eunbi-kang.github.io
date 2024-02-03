@@ -52,7 +52,9 @@ button:focus {
     outline: 1px solid var(--color-accent);
 }
 
-/* Header */
+/* 
+ *  Header 
+ */
 .header {
     background-color: #050a13;
     position: fixed;
@@ -65,7 +67,7 @@ button:focus {
     align-items: center;
 }
 
-.header__logo{
+.header__logo {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -82,6 +84,7 @@ button:focus {
 
 .header__menu{
     display: flex;
+    align-items: center;
     gap: 4px;
 }
 
@@ -97,4 +100,56 @@ button:focus {
 .header__menu__item.active { 
     border: 1px solid var(--color-accent);
     border-radius: 4px;
+}
+
+/* 
+ *  Home
+ */
+
+#home {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 5rem 1rem;
+    padding-top: 7rem;
+    text-align: center;   
+}
+
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    /* object-fit: <img>나 <vidio> 요소와 같은 대체 요소의 
+       콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정한다. */
+    object-fit: cover;
+    border-radius: 100%;
+    border: 3px solid var(--color-accent);
+}
+
+.home__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home__title--strong {
+    color: var(--color-accent);
+}
+
+.home__description {
+    font-size: 1.3rem;
+}
+
+.home__contact {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    margin: 2rem; 
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+.home__contact:hover {
+    background-color: transparent;
+    color: var(--color-text);
+    /* border로 적용하게 되면 앞의 스타일에서 box-sizing: border-box;로 
+       설정한거 때문에 컨텐츠가 밀리는 현상이 나타나게 되므로, outline을 사용해준다. */
+    outline: 2px solid var(--color-accent); 
 }
