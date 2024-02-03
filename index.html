@@ -36,7 +36,6 @@
         <h1 class="header__logo__title"><a href="#">Eunbi</a></h1>
       </div>
       <nav>
-        <ul>
           <ul class="header__menu">
             <li><a class="header__menu__item active" href="#home">Home</a></li>
             <li><a class="header__menu__item" href="#about">About</a></li>
@@ -44,8 +43,8 @@
             <li><a class="header__menu__item" href="#work">My work</a></li>
             <li><a class="header__menu__item" href="#testimonial">Testimonial</a></li>
             <li><a class="header__menu__item" href="#contact">Contact</a></li>
+          <!-- <i class="fa-solid fa-bars" style="color: #FFFFFF;"></i> -->
           </ul>
-        </ul>
       </nav>
     </header>
   <!-- ** Main Start ** -->
@@ -58,41 +57,45 @@
         <a class="home__contact" href="#contact">Contact Me</a>
       </section>
       <!-- * 2) About Section -->
-      <section id="about" class="section">
+      <section id="about" class="section max-container">
         <h2 class="title">About me</h2>
         <p class="description">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
           Placeat suscipit unde illum fugiat dolorum cumque officia debitis dolorem corrupti minus saepe, 
           quam velit sequi quibusdam fugit maiores tenetur aperiam eaque?
         </p>
-        <ul>
-          <li><i class="fa-brands fa-html5"></i></li>
-          <p>Front-end</p>
-          <p>HTML, CSS, Javascript, TypeScript, React, Vue, Web APIs</p>
-          <p></p>
-          <li>
-            <i class="fa-solid fa-mobile"></i>
-            <p>Mobile</p>
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-brands fa-html5 major__icon"></i>
+            <p class="major__title">Front-end</p>
+            <p>HTML, CSS, Javascript, TypeScript, React, Vue, Web APIs</p>
+          </li>
+          
+          <li class="major">
+            <i class="fa-solid fa-mobile major__icon"></i>
+            <p class="major__title">Mobile</p>
             <p>Android, iOS, React Navtive, Flutter, Java, Swift, Kotlin</p>
           </li>
-          <li>
-            <i class="fa-solid fa-server"></i>
-            <p>Back-end</p>
+          <li class="major">
+            <i class="fa-solid fa-server major__icon"></i>
+            <p class="major__title">Back-end</p>
             <p>Java, Javascript, Go, NodeJS, Rest APIs, GraphQL</p>
           </li>
         </ul>
-        <ul>
-          <li><img src="images/jobs/google.png" alt="google logo">
+        <ul class="jobs">
+          <li class="job">
+            <img src="images/jobs/google.png" alt="google logo">
           <div>
-            <p>Google as Senior Software Engineer</p>
-            <p>2019 Oct - Until now</p>
+            <p class="job__name">Google as Senior Software Engineer</p>
+            <p class="job__period">2019 Oct - Until now</p>
           </div>
         </li>
-          <li><img src="images/jobs/samsung.png" alt="samsung logo"></li>
+          <li class="job"><img src="images/jobs/samsung.png" alt="samsung logo">
           <div>
-            <p>Samsung as Software Engineer</p>
-            <p>2014 Sept - 2019 Oct</p>
+            <p class="job__name">Samsung as Software Engineer</p>
+            <p class="job__period">2014 Sept - 2019 Oct</p>
           </div>
+        </li>
         </ul>
       </section>
       <!-- * 3) Skills Section -->

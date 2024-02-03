@@ -13,6 +13,9 @@
     --color-blue: #03e8f9;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
+
+    /* Size */
+    --size-max-width: 1200px;
 }
 
 * {
@@ -58,6 +61,11 @@ button:focus {
 .section {
     padding: 4rem;
     text-align: center;
+}
+
+.max-container {
+    max-width: var(--size-max-width);
+    margin: auto;
 }
 
 .title {
@@ -172,3 +180,58 @@ button:focus {
        설정한거 때문에 컨텐츠가 밀리는 현상이 나타나게 되므로, outline을 사용해준다. */
     outline: 2px solid var(--color-accent); 
 }
+
+/* 
+ *  About
+ */
+ .majors {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 2.5rem 0;
+ }
+
+ .major {
+    background-color: var(--color-primary-variant);
+    padding: 2rem 1rem;
+    color: var(--color-text);
+    border-radius: 1rem;
+    cursor: default; /* major 요소에 마우스를 올렸을 때, 커서가 드래그 모양 -> Default 설정 */
+    box-shadow: 5px 5px 0px 0px #ffc400;
+ }
+ .major__icon {
+    font-size: 4rem;
+    margin: 1rem 0;
+    color: var(--color-accent);
+    transition: all 300ms ease; /* 모든 요소에 한해서 300ms동안 ease 옵션을 넣어준다. */
+ }
+
+ .major__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+ }
+
+ .major:hover .major__icon{
+    transform: rotate(-15deg) scale(1.2); /* 반시계 방향으로 -15deg만큼 회전시키고, 1.2만큼 스케일 확대 */
+ }
+
+ .jobs {
+    text-align: start;
+ }
+
+ .job {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+ }
+
+ .job__name {
+    color: var(--color-primary);
+ }
+
+ .job__period {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+ }
