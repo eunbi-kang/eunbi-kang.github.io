@@ -172,6 +172,7 @@ button:focus {
     margin: 2rem; 
     padding: 0.5rem 1rem;
     font-weight: bold;
+    border-radius: 4px;
 }
 
 .home__contact:hover {
@@ -247,7 +248,7 @@ button:focus {
 
 .skills {
     display: grid;
-    grid-template-columns: 6fr 4fr; /* grid 템플릿 컬럼을 6fr : 4fr */
+    grid-template-columns: 6fr 4fr; /* grid 템플릿 컬럼을 6:4 비율로 나눔 */
     margin: 2rem 3rem;
     border-radius: 8px;
     overflow: hidden;
@@ -350,10 +351,67 @@ button:focus {
     transition: all 250ms ease-in;
 }
 
+.category:hover {
+    background-color: var(--color-white);
+    color: var(--color-gray);
+    border-color: var(--color-white);
+}
+
 .category--selected .category__count,
 .category:hover .category__count { 
     /* category가 select 되었을 때, 그 안에 있는 카테고리 카운트인 경우 or
        카테고리에 마우스가 올라왔을 때 그 안에 카테고리 카운트를 opacity를 1로 지정 */
     opacity: 1;
     top: 0;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 일정하게 1배율로 4번 반복 */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.project {
+    position: relative; /* position의 기준점이 되므로 relative 설정해줌 */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project__img {
+    width: 100%; /* 부모의 너비를 100%만큼 가득 채우도록 */
+    border-radius: 8px;
+}
+
+.project__metadata {
+    position: absolute; /* 기존의 문서에서 빠져나오는 것을 원하기 때문에 absolute 설정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0;
+    display: flex;
+    flex-direction: column; /* 수직방향으로 정렬, flex-direction 값이 row일 경우 수평 방향으로 정렬함 */
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in; /* transition : [ transition-property(width, height), transition-duration, transition-timing-function ] */
+    transform: translateY(-15px);
+}
+
+.project__metadata:hover {
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+
+.project__title:after { /* .project__title 클래스 다음 요소에 선택자를 만들지 않고 after를 사용하여 가상 선택자를 생성 */
+    content: '';
+    display: block;
+    position: relative;
+    left: 50%; /* 기존 위치에서 왼쪽으로 50%만큼 이동 */
+    transform: translateX(-50%);
+    margin: 0.5rem 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-accent);
 }
