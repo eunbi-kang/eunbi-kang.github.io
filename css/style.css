@@ -452,6 +452,26 @@ button:focus {
 }
 
 /* 
+ *  Arrow up
+ */
+.arrow-up {
+    position: fixed; /* 화살표 아이콘을 항상 화면 내에 고정 */
+    background-color: var(--color-primary);
+    bottom: 3rem; /* 화면 상의 bottom으로부터 3rem 띄움 */
+    right: 3rem; /* 화면 상의 right로 부터 3rem 띄움 */
+    font-size: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;
+    text-align: center;
+    box-shadow: 4px 4px 0px 0px var(--color-accent);
+}
+
+.arrow-up:hover {
+    background-color: var(--color-gray);
+}
+
+/* 
  *  Testimonials
  */
  #contact {
