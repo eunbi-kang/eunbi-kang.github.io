@@ -13,6 +13,7 @@
     --color-blue: #03e8f9;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
+    --color-purple: #8b30fb99;
 
     /* Size */
     --size-max-width: 1200px;
@@ -199,7 +200,7 @@ button:focus {
     color: var(--color-text);
     border-radius: 1rem;
     cursor: default; /* major 요소에 마우스를 올렸을 때, 커서가 드래그 모양 -> Default 설정 */
-    box-shadow: 5px 5px 0px 0px #ffa600;
+    box-shadow: 5px 5px 0px 0px var(--color-purple);
  }
  .major__icon {
     font-size: 4rem;
@@ -252,7 +253,7 @@ button:focus {
     margin: 2rem 3rem;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 5px 5px 0px 0px #ffa600;
+    box-shadow: 5px 5px 0px 0px var(--color-purple);
 }
 
 .skills__title {
@@ -327,11 +328,6 @@ button:focus {
     white-space: nowrap;
 }
 
-/* .category:hover {
-    background-color: var(--color-accent);
-    color: var(--color-primary);
-} */
-
 .category--selected {
     background-color: var(--color-accent);
     color: var(--color-primary);
@@ -376,6 +372,7 @@ button:focus {
     position: relative; /* position의 기준점이 되므로 relative 설정해줌 */
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 4px 4px 0px 0px var(--color-purple);
 }
 
 .project__img {
@@ -414,4 +411,41 @@ button:focus {
     width: 50px;
     height: 2px;
     background-color: var(--color-accent);
+}
+
+/* 
+ *  Testimonials
+ */
+.testimonials {
+    margin: 3rem;
+}
+
+.testimonial {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.testimonial:nth-child(even) .testimonial__img { /* 자식요소 중에서 짝수요소 중에서 순서대로 순서를 부여함 */
+    order: 1;
+}
+
+.testimonial__img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    box-shadow: rgb(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.testimonial__bubble {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: rgb(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.testimonial__bubble__name {
+    color: var(--color-accent);
+    font-weight: bold;
+    filter: brightness(70%);
 }
