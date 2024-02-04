@@ -53,7 +53,7 @@ button {
 }
 
 button:focus {
-    outline: 1px solid var(--color-accent);
+    outline: 1px solid transparent;
 }
 
 /* 
@@ -117,6 +117,15 @@ button:focus {
     font-size: 1.8rem; /* 상대적인 유닛, 현재 브라우저의 기본적으로 설정된 폰트 크기의 1.8배 해준다는 의미 */
 }
 
+.header__toggle {
+    display: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+}
+
 .header__menu{
     display: flex;
     align-items: center;
@@ -124,6 +133,7 @@ button:focus {
 }
 
 .header__menu__item {
+    display: block;
     padding: 8px 16px;
 }
 
@@ -133,7 +143,7 @@ button:focus {
 
 /* header__menu__item 클래스 + active 클래스 둘 다 가지고 있을 때 스타일 적용 */
 .header__menu__item.active { 
-    border: 1px solid var(--color-accent);
+    /* border: 1px solid var(--color-accent); */
     border-radius: 4px;
 }
 
@@ -510,7 +520,7 @@ button:focus {
 @media screen and (max-width: 768px) {
     /* Common */
     .section {
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
     }
 
     .title {
@@ -525,22 +535,40 @@ button:focus {
     .header {
         flex-direction: column;
         align-items: start;
+        background-color: var(--color-primary);
+        filter: opacity(90%);
     }
+
+    .header__toggle {
+        display: block;
+    }
+    .header__menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        margin: 1rem 4rem;
+        gap: 1rem;
+    }
+
+    .header__menu.open {
+        display: flex;
+    }
+
+    .header__toggle {}
 
     .header__nav {
         width: 100%;
     }
 
-    .header__menu {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem 4rem;
-        gap: 1rem;
-    }
-
     .header__menu li{
-        display: grid;
+        /* display: grid; */
         width:100%;
+    }
+    .header__menu__item:hover {
+        background-color: white;
+        color: var(--color-black);
+        filter: opacity(70%);
+        border: transparent;
     }
     /* Home */
     #home {

@@ -29,10 +29,13 @@
       src="https://kit.fontawesome.com/54e2001f45.js"
       crossorigin="anonymous"
     ></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Javascript / defer속성 : boolean값을 true로 주냐 false로 주냐에 따라 html문서가 다 로딩된 다음에 parse될건지 말 건지 여부를 정함 -->
     <script src="src/main.js" defer></script>
+    
   </head>
   <body>
     <!-- ** Header Start ** -->
@@ -43,7 +46,8 @@
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a class="header__menu__item active" href="#home">Home</a></li>
+          <li><a class="header__menu__item active" href="#home"> 
+          <i class="fa-solid fa-house">&nbsp;</i>Home</a></li>
           <li><a class="header__menu__item" href="#about">About</a></li>
           <li><a class="header__menu__item" href="#skills">Skills</a></li>
           <li><a class="header__menu__item" href="#work">My work</a></li>
@@ -53,6 +57,9 @@
           <li><a class="header__menu__item" href="#contact">Contact</a></li>
           <!-- <i class="fa-solid fa-bars" style="color: #FFFFFF;"></i> -->
         </ul>
+        <button class="header__toggle" area-label="Navigation menu toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </nav>
     </header>
     <!-- ** Main Start ** -->
