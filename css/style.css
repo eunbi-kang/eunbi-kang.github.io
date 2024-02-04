@@ -197,7 +197,7 @@ button:focus {
     color: var(--color-text);
     border-radius: 1rem;
     cursor: default; /* major 요소에 마우스를 올렸을 때, 커서가 드래그 모양 -> Default 설정 */
-    box-shadow: 5px 5px 0px 0px #ffc400;
+    box-shadow: 5px 5px 0px 0px #ffa600;
  }
  .major__icon {
     font-size: 4rem;
@@ -235,3 +235,42 @@ button:focus {
     color: var(--color-primary);
     font-size: 0.8rem;
  }
+
+ /* 
+ *  Skills
+ */
+#skills {
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);    
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 6fr 4fr; /* grid 템플릿 컬럼을 6fr : 4fr */
+    margin: 2rem 3rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 5px 5px 0px 0px #ffa600;
+}
+
+.skills__title {
+    color: var(--color-accent);
+    margin: 1rem 0; /* .skills__title 클래스 영역 기준으로 마진을 위, 아래로 1rem 주고, 양옆으로 0rem 줌 */
+    font-size: 1.2rem;
+}
+
+.skills__coding {
+    grid-row: span 2; /* skills__coding 클래스 영역을 로우 기준으로 span 2개 영역을 가지도록 */
+    padding: 1rem;
+    background-color: var(--color-primary);
+}
+
+.sklls__tools {
+    padding: 1rem;
+}
+
+.skills__etc {
+    padding: 1rem;
+    background-color: var(--color-primary);
+    filter: brightness(150%); /* 기존의 색상에서 필터를 이용하여 밝기를 조절 */
+}
