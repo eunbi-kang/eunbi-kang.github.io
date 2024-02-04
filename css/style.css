@@ -466,3 +466,11 @@ button:focus {
     padding: 1rem;
     font-size: 2rem;
  }
+
+.contact__link {
+    transition: color 250ms ease-in; /* transition : 속성, 시간, 효과 */
+}
+
+.contact__link:hover {
+   color: var(--color-accent);
+}
