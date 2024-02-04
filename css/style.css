@@ -344,7 +344,7 @@ button:focus {
     border-radius: 100%;
     background-color: var(--color-accent-variant);
     color: var(--color-text);
-    transition: all 250ms ease-in;
+    transition: all 250ms ease-in;/* 자식요소 중에서 짝수요소 중에서 순서대로 순서를 부여함 */
 }
 
 .category:hover {
@@ -427,7 +427,8 @@ button:focus {
     margin-bottom: 2rem;
 }
 
-.testimonial:nth-child(even) .testimonial__img { /* 자식요소 중에서 짝수요소 중에서 순서대로 순서를 부여함 */
+.testimonial:nth-child(even) .testimonial__img {
+    /* 자식요소 중에서 짝수요소 중에서 순서대로 순서를 부여함 */
     order: 1;
 }
 
@@ -449,3 +450,19 @@ button:focus {
     font-weight: bold;
     filter: brightness(70%);
 }
+
+/* 
+ *  Testimonials
+ */
+ #contact {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+ }
+
+ .contact__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+ }
