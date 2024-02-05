@@ -13,18 +13,24 @@ categories.addEventListener('click', function(event){
         return; // 함수에서 아무런 처리도 하지않고 종료해줌.
     }
 
-    /* 
-     *  Active 메뉴를 재설정
-     */
+    handleActiveSelection(event.target); // handleActiveSelection 함수에 event.target 함수인자를 전달해준다.
+
+    filterProjects(filter);
+});
+
+/* 
+ *  Active 메뉴를 재설정
+ */
+function handleActiveSelection(target) {
     const active = document.querySelector('.category--selected');
     active.classList.remove('category--selected');
-    event.target.classList.add('category--selected'); 
-    // 이벤트의 타겟의 대상이되는 것의 클래스리스트에 'category--selected'를 추가해준다.
-    
-    /* 
-     *  프로젝트 필터링
-     */
-    projectsContainer.classList.add('anim-out');
+    target.classList.add('category--selected');
+}
+
+/* 
+ *  프로젝트 필터링
+ */
+function filterProjects(filter){
     projects.forEach(project => {
         if(filter ==='all' || filter === project.dataset.type) {
             project.style.display = 'block';
@@ -32,7 +38,8 @@ categories.addEventListener('click', function(event){
             project.style.display = 'none'
         } 
     });
+    projectsContainer.classList.add('anim-out');
     setTimeout(()=> {
         projectsContainer.classList.remove('anim-out');
     }, 250);
-});
+}
