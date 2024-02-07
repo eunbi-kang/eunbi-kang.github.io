@@ -25,15 +25,14 @@
 
 html {
     scroll-behavior: smooth;
-    -ms-content-zooming: none;
-    -ms-touch-action: pan-x pan-y;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     touch-action: pan-x pan-y;
-    margin: 0;
-    
+    margin: 0;   
 }
 
 h1,
@@ -164,6 +163,7 @@ button:focus {
  */
 
 #home {
+    position: relative;
     background-color: var(--color-primary);
     color: var(--color-text);
     padding: 5rem 1rem;
@@ -171,6 +171,34 @@ button:focus {
     text-align: center;   
 }
 
+.home__divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.home__divider svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 107px;
+}
+
+.home__divider .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .home__divider svg {
+        width: calc(107% + 1.3px);
+        height: 69px;
+    }
+}
 .home__avatar {
     width: 250px;
     height: 250px;
@@ -271,8 +299,37 @@ button:focus {
  *  Skills
  */
 #skills {
+    position: relative;
     background-color: var(--color-primary-variant);
     color: var(--color-text);    
+}
+
+.skills__divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.skills__divider svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 86px;
+}
+
+.skills__divider .shape-fill {
+    fill: var(--color-primary);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .skills__divider svg {
+        width: calc(134% + 1.3px);
+        height: 66px;
+    }
 }
 
 .skills {
@@ -510,9 +567,37 @@ button:focus {
  *  Testimonials
  */
  #contact {
+    position: relative;
     background-color: var(--color-primary);
     color: var(--color-text);
  }
+ .contact__divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.contact__divider svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 86px;
+}
+
+.contact__divider .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .contact__divider svg {
+        width: calc(100% + 1.3px);
+        height: 47px;
+    }
+}
 
  .contact__links {
     display: flex;
