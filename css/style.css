@@ -139,11 +139,15 @@ button:focus {
 
 .header__menu__item:hover {
     border-bottom: 1px solid var(--color-accent);
+    background-color: #ffffff;
+    filter: opacity(80%);
+    color : black;
+    /* margin-bottom: -1px; */
 }
 
 /* header__menu__item 클래스 + active 클래스 둘 다 가지고 있을 때 스타일 적용 */
 .header__menu__item.active { 
-    /* border: 1px solid var(--color-accent); */
+    border: 1px solid var(--color-accent);
     border-radius: 4px;
 }
 
@@ -526,7 +530,7 @@ button:focus {
 @media screen and (max-width: 768px) {
     /* Common */
     .section {
-        padding: 4rem 2rem;
+        padding: 3rem 2rem;
     }
 
     .title {
@@ -552,8 +556,8 @@ button:focus {
         display: none;
         flex-direction: column;
         text-align: center;
-        margin: 1rem 4rem;
-        gap: 1rem;
+        margin: 1rem 1rem;
+        /* gap: 1rem; */
     }
 
     .header__menu.open {
@@ -570,12 +574,12 @@ button:focus {
         /* display: grid; */
         width:100%;
     }
-    .header__menu__item:hover {
+    /* .header__menu__item:hover {
         background-color: white;
         color: var(--color-black);
         filter: opacity(70%);
         border: transparent;
-    }
+    } */
     /* Home */
     #home {
         padding-bottom: 3rem;
