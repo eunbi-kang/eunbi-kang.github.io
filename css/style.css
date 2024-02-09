@@ -19,7 +19,10 @@
     --size-max-width: 1200px;
 
     /* Divider */
-    --divider-single-wave: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path> </svg>')
+    --divider-single-wave: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path> </svg>');
+    --divider-curve: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z"></path> </svg>');
+    --divider-split: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <path d="M600,16.8c0-8.11-8.88-13.2-19.92-13.2H0V120H1200V3.6H619.92C608.88,3.6,600,8.66,600,16.8Z"></path> </svg>');
+    --divider-arrow: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z"></path> </svg>');
 }
 
 * {
@@ -199,16 +202,15 @@ button:focus {
         width: 100%;
         height: 81px;
     }
-    .home__avatar {
-        width: 250px;
-        height: 250px;
-        /* object-fit: <img>나 <vidio> 요소와 같은 대체 요소의 
-           콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정한다. */
-        object-fit: cover;
-        border-radius: 100%;
-        border: 3px solid var(--color-accent);
-    }
-    
+}
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    /* object-fit: <img>나 <vidio> 요소와 같은 대체 요소의 
+       콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정한다. */
+    object-fit: cover;
+    border-radius: 100%;
+    border: 3px solid var(--color-accent);
 }
 
 .home__title {
@@ -306,32 +308,28 @@ button:focus {
     color: var(--color-text);    
 }
 
-.skills__divider {
+#skills::after {
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
+    /* width: calc(103% + 1.3px); */
+    height: 86px;
     overflow: hidden;
     line-height: 0;
-}
-
-.skills__divider svg {
-    position: relative;
-    display: block;
-    width: calc(103% + 1.3px);
-    height: 86px;
-}
-
-.skills__divider .shape-fill {
-    fill: var(--color-primary);
+    background-color: var(--color-primary);
+    mask: var(--divider-curve);
+    -webkit-mask: var(--divider-curve);
 }
 
 /** For mobile devices **/
 @media (max-width: 767px) {
-    .skills__divider svg {
-        width: calc(134% + 1.3px);
+    /* #skills { */
+        /* width: calc(134% + 1.3px); */
+        /* width: 100%;
         height: 66px;
-    }
+    } */
 }
 
 .skills {
@@ -395,6 +393,9 @@ button:focus {
 #work {
     background-color: var(--color-primary);
     color: var(--color-text);
+}
+#work::after {
+
 }
 
 .categories {
@@ -573,30 +574,26 @@ button:focus {
     background-color: var(--color-primary);
     color: var(--color-text);
  }
- .contact__divider {
+ #contact::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
+    /* width: calc(103% + 1.3px); */
     width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.contact__divider svg {
-    position: relative;
-    display: block;
-    width: calc(103% + 1.3px);
     height: 86px;
+    line-height: 0;
+    background-color: var(--color-white);
+    mask: var(--divider-arrow);
+    -webkit-mask: var(--divider-arrow);
 }
 
-.contact__divider .shape-fill {
-    fill: #FFFFFF;
-}
 
 /** For mobile devices **/
 @media (max-width: 767px) {
-    .contact__divider svg {
-        width: calc(100% + 1.3px);
+    #contact::after {
+        /* width: calc(100% + 1.3px); */
+        width: 100%;
         height: 47px;
     }
 }
