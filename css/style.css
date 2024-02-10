@@ -115,6 +115,7 @@ button:focus {
     align-items: center;
     z-index: 1; /* 화면의 프론트단 우선순위를 최우선으로 높임 */
     transition: all 300ms ease;
+    border-bottom:solid 2px #3e3e3e33;
 }
 
 .header--dark {
