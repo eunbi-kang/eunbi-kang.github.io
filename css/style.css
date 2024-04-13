@@ -43,7 +43,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     touch-action: pan-x pan-y;
     margin: 0;   
 }
@@ -95,10 +95,17 @@ button:focus {
 }
 
 .description {
-    font-size: 1.5rem;
+    color:#686868;
+    font-family: "Orbit", sans-serif;
+    font-weight: lighter;
+    font-size: 1.0rem;
     margin: 0.5rem 0;
 }
 
+.description__strong {
+    font-weight: bolder;
+    color: #121212;
+}
 
 /* 
  *  Header 
@@ -136,6 +143,7 @@ button:focus {
 
 .header__logo__title {
     font-size: 1.8rem; /* 상대적인 유닛, 현재 브라우저의 기본적으로 설정된 폰트 크기의 1.8배 해준다는 의미 */
+    font-family: "Jersey 20", sans-serif;
 }
 
 .header__toggle {
@@ -154,6 +162,9 @@ button:focus {
 }
 
 .header__menu__item {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     display: block;
     padding: 8px 16px;
 }
@@ -224,6 +235,7 @@ button:focus {
 }
 
 .home__title {
+    font-family: "Jersey 20", sans-serif;
     font-size: 3rem;
     margin-bottom: 1rem;
 }
