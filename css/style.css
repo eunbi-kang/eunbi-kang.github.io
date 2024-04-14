@@ -45,6 +45,7 @@ html {
 body {
     font-family: 'Ubuntu', sans-serif;
     touch-action: pan-x pan-y;
+    -webkit-touch-callout: none;
     margin: 0;   
 }
 
@@ -278,7 +279,7 @@ button:focus {
  }
 
  .major {
-    max-width: 25rem;
+    width: auto;
     background-color: var(--color-primary-variant);
     padding: 2rem 1rem;
     color: var(--color-text);
