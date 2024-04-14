@@ -100,6 +100,7 @@ button:focus {
     font-weight: lighter;
     font-size: 1.0rem;
     margin: 0.5rem 0;
+    word-spacing: -0.2rem;
 }
 
 .description__strong {
@@ -277,6 +278,7 @@ button:focus {
  }
 
  .major {
+    max-width: 25rem;
     background-color: var(--color-primary-variant);
     padding: 2rem 1rem;
     color: var(--color-text);
@@ -285,6 +287,7 @@ button:focus {
     box-shadow: 5px 5px 0px 0px var(--color-purple);
  }
  .major__icon {
+    min-width: 15rem;
     font-size: 4rem;
     margin: 1rem 0;
     color: var(--color-accent);
@@ -653,6 +656,7 @@ button:focus {
 
     .description {
         font-size: 1rem;
+        word-spacing: -0.5rem;
     }
     
     /* Header */
