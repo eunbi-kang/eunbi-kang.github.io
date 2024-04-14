@@ -96,12 +96,13 @@ button:focus {
 }
 
 .description {
+    /* max-width:25rem; */
     color:#686868;
     font-family: "Orbit", sans-serif;
     font-weight: lighter;
-    font-size: 1.0rem;
+    font-size: 1rem;
     margin: 0.5rem 0;
-    word-spacing: -0.2rem;
+    word-spacing: -0.3rem;
 }
 
 .description__strong {
@@ -279,6 +280,8 @@ button:focus {
  }
 
  .major {
+    max-width: 25rem;
+    min-width: 20rem;;
     width: auto;
     background-color: var(--color-primary-variant);
     padding: 2rem 1rem;
@@ -656,7 +659,7 @@ button:focus {
     }
 
     .description {
-        font-size: 1rem;
+        font-size: 0.95rem;
         word-spacing: -0.5rem;
     }
     
@@ -721,7 +724,7 @@ button:focus {
         align-items: center;
     }
     .major {
-        max-width: 25rem;
+        min-width: 25rem;
     }
 
     .job {
@@ -734,6 +737,9 @@ button:focus {
         box-shadow: 0 3px 10px rgb(0,0,0,0.2);
     }
 
+    .skills__coding {
+        padding: 0.1rem;
+    }
     /* Work */
     .categories {
         flex-direction: column;
