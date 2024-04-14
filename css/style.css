@@ -228,8 +228,10 @@ button:focus {
     }
 }
 .home__avatar {
-    width: 250px;
-    height: 250px;
+    max-width: 250px;
+    width: 50%;
+    height: auto;
+    /* height: 250px; */
     /* object-fit: <img>나 <vidio> 요소와 같은 대체 요소의 
        콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정한다. */
     object-fit: cover;
@@ -281,7 +283,7 @@ button:focus {
 
  .major {
     max-width: 25rem;
-    min-width: 20rem;;
+    /* min-width: 20rem; */
     width: auto;
     background-color: var(--color-primary-variant);
     padding: 2rem 1rem;
@@ -291,7 +293,7 @@ button:focus {
     box-shadow: 5px 5px 0px 0px var(--color-purple);
  }
  .major__icon {
-    min-width: 15rem;
+    /* min-width: 15rem; */
     font-size: 4rem;
     margin: 1rem 0;
     color: var(--color-accent);
@@ -724,7 +726,7 @@ button:focus {
         align-items: center;
     }
     .major {
-        min-width: 25rem;
+        /* width: auto; */
     }
 
     .job {
